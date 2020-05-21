@@ -4,7 +4,7 @@ import os
 
 class BswConan(ConanFile):
     name = "lexical"
-    version = "0.0.1-1"
+    version = "0.0.1"
     license = "<Put the package license here>"
     author = "Igor Gutnik"
     description = "Basic SoftWare"
@@ -13,7 +13,7 @@ class BswConan(ConanFile):
     
     def _configure_cmake(self):
         cmake = CMake(self)
-        cmake.configure(source_folder='bsw', build_folder='build')
+        cmake.configure(source_folder='lexical', build_folder='build')
         return cmake
 
     def source(self):

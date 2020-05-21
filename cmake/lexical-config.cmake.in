@@ -1,0 +1,14 @@
+get_filename_component(BSW_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+list(APPEND CMAKE_MODULE_PATH ${BSW_CMAKE_DIR})
+
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+
+
+
+if((NOT TARGET lexical::lemon) AND (NOT TARGET lexical::re2c))
+    include(${CMAKE_CURRENT_LIST_DIR}/lexical-targets.cmake)
+endif()
+
