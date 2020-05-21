@@ -6,4 +6,6 @@ substr.cc         translate.cc      utf16.cc          utf16_range.cc
 utf16_regexp.cc   utf8.cc           utf8_range.cc     utf8_regexp.cc
 )
 
-onyx_exec (re2c src hdr)
+add_executable (re2c ${src})
+add_executable (lexical::re2c ALIAS re2c)
+

@@ -1,2 +1,4 @@
 set (src lemon.c)
-onyx_exec_no_rc (lemon src hdr)
+add_executable (lemon ${src})
+add_executable(lexical::lemon ALIAS lemon)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/lempar.c ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/lempar.c COPYONLY)
